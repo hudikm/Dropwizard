@@ -124,7 +124,6 @@ public class SayingResource {
         }
         throw new WebApplicationException(Response.status(Response.Status.NOT_FOUND).build());
     }
-
     
     @GET
     @Path("/list")
@@ -132,7 +131,6 @@ public class SayingResource {
     @UnitOfWork
     public SayingListView getSaying() {
         return new SayingListView(sayingDAO.findAll());
-
     }
 
     @GET
